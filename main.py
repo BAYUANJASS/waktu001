@@ -38,8 +38,8 @@ async def handle_izin(update, context, user_id, chat_id, message_id, izin_type, 
         return
 
     if user_id in user_timers:
-        await safe_send_message(context, chat_id, "⏳ Masih ada izin aktif. Gunakan /done dulu.", message_id)
-        return
+     await safe_send_message(context, chat_id, "⏳ Kamu masih punya izin aktif.")
+     return
 
     reason = f"Izin {izin_type}"
     info = f"🕒 {reason} dimulai."
